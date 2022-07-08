@@ -30,12 +30,14 @@ class Factura:
         azi = date.today()
         print (f'Factura seria {self.seria} numar {self.numar}')
         print(f'Data este: {azi}')
-        print("{:<8} {:<15} {:<10} {:<15}".format('Nume', 'Cantitate', 'Pret', 'Total'))
-        print("{:<8} {:<15} {:<10} {:<15}".format(self.nume_produs, self.cantitate, self.pret_buc, total))
-
-
+        print("{:<15} {:<20} {:<10} {:<15}".format('Nume', 'Cantitate', 'Pret', 'Total'))
+        print("{:<15} {:<20} {:<10} {:<15}".format(self.nume_produs, self.cantitate, self.pret_buc, total))
 
 
 
 factura1 = Factura(1,'telefon',5,1)
+factura1.genereaza_factura()
+factura1.sch_nume('inghetata')
+factura1.sch_pretul(100)
+factura1.sch_cantitatea(20)
 factura1.genereaza_factura()
